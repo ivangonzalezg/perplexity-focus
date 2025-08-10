@@ -1,11 +1,24 @@
 {
   "manifest_version": 3,
-  "name": "Auto Button Clicker",
-  "version": "1.0",
-  "description": "Automatically clicks two buttons in sequence on a specific page.",
+  "name": "Perplexity Focus",
+  "version": "1.1",
+  "description": "Automatically disables the web search feature on Perplexity.ai to keep your searches focused.",
   "permissions": ["scripting"],
-  "host_permissions": ["https://*.perplexity.ai/*"],
+  "host_permissions": ["https://www.perplexity.ai/*"],
   "background": {
     "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Perplexity Focus is active",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
   }
 }
