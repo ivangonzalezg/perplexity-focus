@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Button Clicker",
+  "version": "1.0",
+  "description": "Automatically clicks two buttons in sequence on a specific page.",
+  "permissions": ["scripting"],
+  "host_permissions": ["https://*.perplexity.ai/*"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
