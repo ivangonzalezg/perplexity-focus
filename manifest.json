@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
   "name": "Perplexity Focus",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Automatically disables the web search feature on Perplexity.ai to keep your searches focused.",
-  "permissions": ["scripting"],
+  "permissions": ["scripting", "webNavigation"],
   "host_permissions": ["https://www.perplexity.ai/*"],
   "background": {
     "service_worker": "background.js"

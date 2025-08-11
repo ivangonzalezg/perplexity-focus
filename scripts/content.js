@@ -27,8 +27,10 @@ function sleep(milliseconds) {
 async function clickButtons() {
   const FIRST_BUTTON_SELECTOR = '[data-testid="sources-switcher-button"]';
   const SECOND_BUTTON_SELECTOR = ".absolute .scrollbar-subtle button";
+
   try {
     await sleep(100);
+
     const firstButton = await waitForElement(FIRST_BUTTON_SELECTOR);
     firstButton.click();
     await sleep(100);
