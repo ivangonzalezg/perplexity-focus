@@ -23,13 +23,20 @@ function waitForElement(selector) {
   });
 }
 
+function sleep(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
+
 async function clickButtons() {
   try {
+    await sleep(100);
     const firstButton = await waitForElement(FIRST_BUTTON_SELECTOR);
     firstButton.click();
+    await sleep(100);
 
     const secondButton = await waitForElement(SECOND_BUTTON_SELECTOR);
     secondButton.click();
+    await sleep(100);
 
     const firstButtonAgain = await waitForElement(FIRST_BUTTON_SELECTOR);
     firstButtonAgain.click();
