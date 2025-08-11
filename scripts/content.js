@@ -1,8 +1,5 @@
 console.log("Perplexity Focus content script loaded.");
 
-const FIRST_BUTTON_SELECTOR = '[data-testid="sources-switcher-button"]';
-const SECOND_BUTTON_SELECTOR = ".absolute .scrollbar-subtle button";
-
 function waitForElement(selector) {
   return new Promise((resolve) => {
     if (document.querySelector(selector)) {
@@ -28,6 +25,8 @@ function sleep(milliseconds) {
 }
 
 async function clickButtons() {
+  const FIRST_BUTTON_SELECTOR = '[data-testid="sources-switcher-button"]';
+  const SECOND_BUTTON_SELECTOR = ".absolute .scrollbar-subtle button";
   try {
     await sleep(100);
     const firstButton = await waitForElement(FIRST_BUTTON_SELECTOR);
@@ -43,7 +42,7 @@ async function clickButtons() {
 
     console.log("Perplexity Focus sequence complete!");
   } catch (error) {
-    console.error("Auto Clicker Error:", error);
+    console.error("Perplexity Focus Error:", error);
   }
 }
 
